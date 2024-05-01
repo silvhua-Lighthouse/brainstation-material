@@ -317,7 +317,43 @@ Interested in bouldering:
 * 
 
 # 2024-05-01
+## CSS and VS Code Demo
 Instructor: Joseph Young
 
 * Extensions such as `Mithril Emmet` helps create script templates such as for HTML. `shift + !`.
 * Any HTML page should only have one h1 heading.
+
+## CSS Specificity and Complex Selectors
+Instructor: Ed Baafi
+
+Selector Type | example | Description
+--- | ---- | ---
+Multiple selectors | `p.red-paragraph.special` | The second `.` acts like "and"
+Grouped selectors | `p.red-paragraph, p.special` | `,` acts like "or"
+Descendent selector | `p .red-paragraph` | The space indicates that the element to the left is the ancestor and the element to the right is the descendent.
+Child selector | `div.my-parent > div` | the `>` indicates we are looking for that element that is a **direct** child of the thing on the left. It is more granular than the descendant selector.
+
+### Descendant selectors  
+
+`index.html`
+```html
+<p>
+    <span class="red-text">
+        I am dark red
+    </span>
+</p>
+<span class="red-text">
+    I am dark red
+</span>
+```
+
+`style.css`
+```css
+p .red-text { 
+    color: darkred;
+}
+
+.red-text {
+    color: red;
+}
+```
