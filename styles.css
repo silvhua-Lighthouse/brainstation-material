@@ -1,0 +1,26 @@
+/* html {
+    text-align: center;
+} */
+.header-classname {
+    text-align: center;
+    color: blue;
+    border: 1px solid red;
+}
+h1 {
+    font-size: 60px;
+}
+.album {
+    border: 1px solid black;
+    margin: 10px;
+    margin-top: 200px;
+}
+.favourite-album {
+    background-color: gold;
+}
+img {
+    width: 25%;
+}
+footer {
+    border: 2px dotted rebeccapurple; 
+    text-align: center;
+}
