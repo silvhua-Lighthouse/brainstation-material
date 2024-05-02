@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+.border-example {
+    width: 132px;
+    height: 132px;
+    background: wheat;
+    border-left: 8px solid black;
+    border-right: 8px dashed yellow;
+    border-top: 12px dotted blue;
+    border: 12px solid black;
+    padding: 12px;
+}
+
+.outline-example {
+    outline: 2px solid yellow;
+    font-size: 3rem;
+}
+.padding-example {
+    border: 2px solid black;
+    padding-left: 12px;
+    padding-right: 8px;
+    padding: 12px;
+}
+.box-sizing-content-example {
+    box-sizing: content-box;
+    width: 300px;
+    height: 250px;
+    margin-top: 2rem;
+    border: 5px solid red;
+    background-color: aliceblue;
+    font-size: 1.25rem;
+}
+.child {
+    height: 50%;
+    width: 100%;
+    padding: 0.25rem;
+    border: 5px solid blue;
+    color: white;
+}
+.box-sizing-content-example .child {
+    box-sizing: content-box;
+}
+.box-sizing-border-example {
+    box-sizing: border-box;
+    margin-top: 25px;
+    width: 300px;
+    border: 5px solid blue;
+    background-color: aliceblue;
+    padding: 0.25rem;
+}

@@ -357,3 +357,42 @@ p .red-text {
     color: red;
 }
 ```
+# 2024-05-02 CSS Units
+Instructor: Ed
+
+## The Relative Units
+Unit | Description | When to use
+--- | --- | ---
+% | Relative to the containing block (parent block) | Use if at all possible. Containing block needs to have a value set. Great for defining widths.
+em | Relative to the font-size of the current element. | Preferable to use for padding and margin as well as font size. 
+rem | Relative to root font size. | Should be used 99.9% of the time for font size. Setting font size using rem is better for those with accessibility needs.
+vh, vw | Relative to 1% of the viewport height/width. Viewport is the browser window. | Great for when you want to take up a certain percentage of the viewport. Not used as often as %. 
+vmin | Relative to 1% of the viewport smallest side | [Same as vh, vw]
+vmax | Relative to 1% of the viewport largest side | [Same as vh, vw]
+
+* If no font size is set, it is inherited.
+* Sometimes browser has preset styles which may cause conflicts such as with h2. Best practice to have control over what the view sees is to explicitely set font size.
+
+### Rule of Thumb:
+- Use % for layout and structure of your page, anything that you can think of being flexible, either based on responsiveness to browser screen or other containers
+- Use rem for margins, paddings and font-sizes.
+- For zooming accessibility using rems for all sizes in CSS, including media query breakpoints, is usually enough to avoid problems
+- Use vw, vh for things that need to be relative to browser width or height (aka viewport)
+- Use px only if you are sure it can't be a relative value
+- Often height can be left unset (auto) so that the element's height is based on its content (I removed the height from the cards in the demo to show this)
+- Note: (advanced) for the question about setting a max margin or padding so that it can be based on rem or em but not go over a set value, you can use min() (counterintuitive because we're trying to set a max value, that's why I had to thin about it).
+    - Consider margin: min(30px, 1rem); which sets the margin to the minimum of the values 30px and 1rem.
+    - When 1rem (based on 1X root font size) is less than 30px, the margin will be set to 1rem (the minimum of the two numbers) but when 1rem is greater than 30px, the margin will be set to 30px (the minimum of the two)
+
+## Box Model + Chrome Dev Tools
+Instructor: Jasleen
+
+* Recommended unit for borders is px.
+
+### Box-sizing property
+* Defines how the browser should calculate the total width and height of an element.
+
+value | description
+--- | ---
+`content-box` (default) | Width and height affect the content box, not the padding or margin.
+`border-box` | Content box width/height include the padding and border. Margin doesn't affect the width/height calculation.

@@ -1,0 +1,19 @@
+html {
+    background-color: black;
+}
+
+.container{
+	width: 1000px;
+}
+
+.box{
+	width: 200px;
+	height: 300px;
+	margin: 10px 20px;
+	display: inline-block;
+    background-color: white;
+}
+
+#thatBox{
+	margin: 20px 200px;
+}

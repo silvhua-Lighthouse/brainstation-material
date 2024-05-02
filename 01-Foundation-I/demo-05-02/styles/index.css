@@ -1,0 +1,83 @@
+html {
+    font-size: 14px;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+.blue {
+    background-color: blue;
+}
+.green {
+    background-color: green;
+}
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.half-screen-width {
+    width: 50vw;
+}
+.quarter-screen-width {
+    width: 25vw;
+}
+
+.quarter-screen-height {
+    height: 25vh
+}
+
+.full-screen-width {
+    width: 100vw;
+}
+
+.full-screen-height {
+    height: 100vw;
+}
+.quarter-screen-height {
+    height: 25vw;
+}
+
+.someclass {
+    width: 50%;
+}
+
+.half-width {
+    width: 50%;
+}
+
+.quarter-height {
+    height: 25%;
+}
+
+.card {
+    display: inline-block;
+    width: 20%;
+    margin-left: 4%;
+    margin-right: 4%;
+    height: 400px;
+    background-color: gold;
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+.extra-large {
+    font-size: 3rem;
+}
+.medium-font-size {
+    font-size: 1.5rem;
+}
+.extra-small-font {
+    font-size: 0.5rem;
+}
+.three-times-font {
+    font-size: 3em;
+}
+.small-font {
+    font-size: 1rem;
+}
