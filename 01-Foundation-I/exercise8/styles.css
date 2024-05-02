@@ -1,0 +1,41 @@
+html {
+    font-size: 16px;
+    width: 100%
+}
+.banner {
+    width: 100%;
+    padding: 2rem 1rem;
+    background-color: lightskyblue;
+    border-top: 6px solid springgreen;
+    border-bottom: 6px solid springgreen;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+.column {
+    margin: 0 0.5rem;
+    border: 3px solid black;
+    margin-right: 1rem;
+    display: inline-block;
+    width: 28%
+}
+.coral {
+    background-color: coral;
+}
+.lightyellow {
+    background-color: lightyellow;
+}
+.honeydew {
+    background-color: honeydew;
+}
+
+.green-highlight {
+    background-color: greenyellow;
+}
+
+p {
+    font-size: 1rem;
+}
