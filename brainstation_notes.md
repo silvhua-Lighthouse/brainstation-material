@@ -396,3 +396,46 @@ value | description
 --- | ---
 `content-box` (default) | Width and height affect the content box, not the padding or margin.
 `border-box` | Content box width/height include the padding and border. Margin doesn't affect the width/height calculation.
+
+# 2024-05-03 Display
+Instructor: Joseph Young
+
+Value | Description | Notes
+--- | ---- | ---
+`block` | | Greedy
+`inline` | | Does not accept height/width. 
+`inline-block` |  | allows us to define margins, heights, etc.
+`none` | Element is not displayed and doesn't take up space, unlike `visibility: hidden`.
+
+## Default display
+
+value | description
+--- | ---
+block | `div`, `p`, header tags
+inline-block | `img` and `button`
+inline | `span` and `a`
+
+* Technically, `img`'s default display is inline but it acts more like inline-block.
+
+
+### How to center inline-block elements:
+```css
+margin: 0 auto;
+width: fit-content;
+```
+OR
+```css
+text-align: center;
+```
+
+# 2024-05-03 BEM demo
+Instructor: Jasleen
+
+```css
+.container {
+    width: calc(33% - 20px)
+}
+```
+CSS property | Description | Notes
+--- | --- | ---
+`overflow: auto` | To clip content and provide scrollbar
