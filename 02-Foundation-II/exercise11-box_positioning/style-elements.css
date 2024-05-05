@@ -28,30 +28,36 @@
  * the photos in the gallery section to display correctly
  */
 
- /* Notice that we don't actually see photo-2! Why is that? */
+ /* Notice that we don't actually see photo-2! Why is that? --> It's because .photo-1 has `position: absolute` */
 .photo-1 {
-    position: absolute;
-    display: block;
+    /* position: absolute; */
+    /* display: block; */
+    display: inline-block;
 }
 
 .photo-2 {
     display: inline-block;
 }
 
-/* Can you figure out why is photo-3 is tiny? */
+/* Can you figure out why is photo-3 is tiny? -> because of `display: inline` */
 .photo-3 {
-    display: inline;
+    /* display: inline; */
+    display: inline-block;
 }
 
 .photo-4 {
-    float: right;
+    /* float: right; */
+    display: inline-block;
 }
 
 /* How do we center the elements in the gallery without flexbox? */
 .gallery {
-
+    text-align: center;
 }
-
+.gallery__item {
+    width: 15vw;
+    height: 15vw;
+}
 /* Diving deeper: Nested positioning */
 
 /* Try making this hidden modal visible.
