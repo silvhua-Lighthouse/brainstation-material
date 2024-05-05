@@ -1,0 +1,97 @@
+/* Box-sizing border-box */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body {
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+a {
+	padding: 10px;
+}
+
+header {
+	height: 50px;
+	background: #999999;
+	border-bottom: solid 1px;
+}
+
+.header-left, .header-right, .logo {
+}
+
+.logo {
+	font-size: 2rem;
+}
+
+.header-left {
+	padding-left: 20px;
+}
+
+.header-right {
+	padding-right: 20px;
+}
+
+.hero {
+	height: 300px;
+	background: #eeeeee;
+	text-align: center;
+	border-bottom: solid 1px #666666;
+}
+
+main {
+}
+
+.card-list {
+	width: 100%;
+	padding: 35px;
+}
+
+.card {
+	width: 150px;
+	height: 200px;
+	margin: 10px;
+	background: #eeeeee;
+	box-shadow: 3px 3px 3px #aaaaaa;
+	border-radius: 5px;
+}
+
+.card-content {
+	text-align: center;
+}
+
+.card-title {
+	border-top: dashed 1px #555555;
+	padding-top: 15px;
+}
+
+.activity-list {
+	background: #dddddd;
+	padding: 20px;
+}
+
+.activity-list > * {
+}
+
+.activity-item {
+	width: 300px;
+	height: 150px;
+	background: white;
+	margin: 10px 0;
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px #999999;
+}
+
+footer {
+	background: #999999;
+	border-top: solid 1px #666666;
+	padding: 25px;
+}
+
+.header-left {
+}
+
+.header-right {
+}
+
+.footer-left {
+}
