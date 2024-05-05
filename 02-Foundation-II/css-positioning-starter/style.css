@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.parent-square{
+  display: none;
+}
+
+.square {
+  height: 300px;
+  width: 300px;
+  display: block;
+  position: relative;
+}
+
+/*uncomment this ruleset for the fixed section */
+
+/* .fixed {
+  position: fixed;
+  top: 0;
+} */
+
+.first {
+  background-color: blue;
+}
+
+.second {
+  background-color: red;
+}
+
+.third {
+  background-color: green;
+}
+
+.fourth {
+  background-color: purple;
+}
+
+/* 
+  uncomment these two rulesets below for 
+    the absolute section 
+*/
+
+/* .parent-square{
+  display: block;
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background-color: palevioletred;
+}
+
+.child-square{
+  background-color: aquamarine;
+  width: 75px;
+  height: 75px; 
+}*/
