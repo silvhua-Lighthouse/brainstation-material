@@ -14,13 +14,6 @@ body {
   position: relative;
 }
 
-
-.square:not(:nth-child(2)) {
-  position: relative; 
-  top: -300px;
-  left: 0px;
-}
-
 /*uncomment this ruleset for the fixed section */
 
 /* .fixed {
@@ -30,9 +23,6 @@ body {
 
 .first {
   background-color: blue;
-  position: relative; 
-  top: 900px;
-  left: 0;
 }
 
 .second {
