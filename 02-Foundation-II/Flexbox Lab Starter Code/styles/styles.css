@@ -14,6 +14,11 @@ header {
 	height: 50px;
 	background: #999999;
 	border-bottom: solid 1px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.header-item {
 }
 
 .header-left, .header-right, .logo {
@@ -36,6 +41,9 @@ header {
 	background: #eeeeee;
 	text-align: center;
 	border-bottom: solid 1px #666666;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 main {
