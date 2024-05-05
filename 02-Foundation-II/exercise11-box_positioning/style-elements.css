@@ -5,7 +5,6 @@
  */
 
 .menu {
-    /* Code for Part 1 here! */
 }
 
 /* Part 2 */
@@ -13,9 +12,14 @@
  * Vertically center the content inside the hero section
  */
 
+.hero {
 
+}
 .hero-content {
-    /* Code for Part 2 here! No flexboxes! */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
 }
 
 /* Part 3 */
