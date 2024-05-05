@@ -58,17 +58,25 @@
     width: 15vw;
     height: 15vw;
 }
+
+.description {
+    width: 60%;
+}
 /* Diving deeper: Nested positioning */
 
 /* Try making this hidden modal visible.
  * How do we horizontally and vertically center it on the page?
  */
 .modal-container {
-    visibility: hidden;
+    /* visibility: hidden; */
+
 }
 
 .modal {
     position: relative;
+    /* margin: 0 auto; */
+    transform: translateX(-50%);
+    left: 50%;
 }
 
 /* Let's move this close icon to the top left corner of the modal,
@@ -77,5 +85,7 @@
  * it's positioning is relative to the parent container and not the whole document!
  */
 .modal__close-button {
-
+    position: absolute;
+    right: 24px;
+    
 }
