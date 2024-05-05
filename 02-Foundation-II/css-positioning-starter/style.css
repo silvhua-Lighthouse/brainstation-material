@@ -16,11 +16,10 @@ body {
 
 /*uncomment this ruleset for the fixed section */
 
-.fixed {
+/* .fixed {
   position: fixed;
-  top: calc(50% - 150px);
-  left: calc(50% - 150px);
-}
+  top: 0;
+} */
 
 .first {
   background-color: blue;
