@@ -1,0 +1,71 @@
+/* Part 1 */
+/**
+ * Get the nav bar to stick to the top of the page,
+ * so that it doesn't move when you scroll
+ */
+
+.menu {
+    /* Code for Part 1 here! */
+}
+
+/* Part 2 */
+/**
+ * Vertically center the content inside the hero section
+ */
+
+
+.hero-content {
+    /* Code for Part 2 here! No flexboxes! */
+}
+
+/* Part 3 */
+/**
+ * Modify/add code to the following blocks to get
+ * the photos in the gallery section to display correctly
+ */
+
+ /* Notice that we don't actually see photo-2! Why is that? */
+.photo-1 {
+    position: absolute;
+    display: block;
+}
+
+.photo-2 {
+    display: inline-block;
+}
+
+/* Can you figure out why is photo-3 is tiny? */
+.photo-3 {
+    display: inline;
+}
+
+.photo-4 {
+    float: right;
+}
+
+/* How do we center the elements in the gallery without flexbox? */
+.gallery {
+
+}
+
+/* Diving deeper: Nested positioning */
+
+/* Try making this hidden modal visible.
+ * How do we horizontally and vertically center it on the page?
+ */
+.modal-container {
+    visibility: hidden;
+}
+
+.modal {
+    position: relative;
+}
+
+/* Let's move this close icon to the top left corner of the modal,
+ * say 24px from the right side. How do we do that?
+ * Tip: When you absolutely position an element inside a relative positioned element,
+ * it's positioning is relative to the parent container and not the whole document!
+ */
+.modal__close-button {
+
+}
