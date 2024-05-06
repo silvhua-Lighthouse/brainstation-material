@@ -8,10 +8,31 @@ h2 {
     font-family: cursive;
 }
 
-ol {
+ul {
     background-color: beige;
 }
 
 li {
     font-weight: bold;
+}
+
+.snack-list { 
+    background-color: lightsalmon;
+}
+
+.cold-drink-list {
+    background-color: rgb(127, 255, 212);
+}
+
+#cold-drink-special {
+    font-weight: normal;
+}
+
+.title {
+    font-family: arial;
+}
+
+ul {
+    background-color: #DC143C;
+    border: thin dashed black;
 }
