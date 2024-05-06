@@ -1,0 +1,55 @@
+/*# sourceMappingURL=styles.css.map */
+$cyan: rgb(127, 255, 212);
+$red: #DC143C;
+$teal: teal;
+
+h1 {
+    border: 4px solid teal;
+}
+
+h2 {
+    font-size: 14px;
+    font-family: cursive;
+}
+
+ul {
+    background-color: beige;
+}
+
+li {
+    font-weight: bold;
+}
+
+.snack-list { 
+    background-color: lightsalmon;
+    li {
+        color: $teal;
+    }
+}
+
+.cold-drink-list {
+    background-color: $cyan;
+}
+
+#cold-drink-special {
+    font-weight: normal;
+}
+@mixin daily-special {
+    @extend #cold-drink-special;
+}
+#hot-drink-special, #snack-special {
+    @include daily-special;
+}
+
+
+.title {
+    font-family: arial;
+}
+.list {
+    border: thin dashed black;
+
+}
+ul {
+    background-color: $red;
+    @extend .list;
+}
