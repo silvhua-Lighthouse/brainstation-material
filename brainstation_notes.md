@@ -439,3 +439,86 @@ Instructor: Jasleen
 CSS property | Description | Notes
 --- | --- | ---
 `overflow: auto` | To clip content and provide scrollbar
+
+# 2024-05-06 
+## Flexbox
+Instructor: Joseph Young
+
+* Flexbox is based on 2 axes:
+    * Main axis: Default is x-axis
+    * Cross axis: Default is y-axis
+* 4 possible values for `flex-direction` property:
+    * row (default)
+    * row-reverse
+    * column
+    * column-reverse
+* possible values for `justify-content` property:
+    * flex-start
+    * flex-end
+    * center
+    * space-between
+    * space-around
+    * space-evenly
+* `align-items` property is for the cross-axis (default vertical)
+* `align-content` property is for the cross-axis (default vertical)
+    * acronym: JCAlI
+* `flex-wrap`
+* When items have a main axis of vertical with flex-wrap, to prevent items from bleeding out of the container:
+    * Use `flex-wrap`, OR
+    * Set container height to 100%
+* `align-self`
+* `flex-flow`: Shorthand for `flex-direction` and `flex-wrap`
+    `flex-flow: <flex-direction> <flex-wrap>`
+
+## Order
+* By default, all child elements have an index of 0.
+* If the order of elements is the same, go by the order in which they are listed in the HTML.
+
+# CAP Workshop: Telling Your Story
+Instructor: Julia Osmar
+
+* About Julia
+    * Former food stylist.
+    * Leads BrainStation's Experience team.
+* Breakout room: Practised pitch with Amie Liang
+    * She has a background in retail banking and was a financial analyst.
+* To be memorable, lead with your "why", not with your skills.
+
+## Understanding your path activity
+
+Opening (1 sentence) | Why did you start? | What did you learn? | Fave aspect of the role/experience? | Least fave aspect
+--- | ---- | --- | --- | ---
+Kinesiologist | I have a mission of improving people's health. | I learned that to help people improve their health, you need to help them change their behaviour. | I loved helping people get stronger and move pain-free. | I realized that many workplace injuries could have been prevented if people were stronger and moved better.
+Personal trainer | I wanted to help people take a proactive approach to health. | I learned that to succeed as a fitness professional, you need to develop business skills. | I loved helping clients get better results than they would have gotten on their own. | I didn't like having to worry my business: getting and retaining clients.
+Freelance data scientist | Someone in my network gave me the opportunity to develop a specific software. | I learned how to use AWS to deploy an app and how to implement CI/CD. | I loved writing code for a real-life business use case. | I didn't have colleagues to go to for help.
+
+## Crafting your story
+1. Opening: "I am ..." -> I am a kinesiologist-turned-developer
+2. Why are you interested in this field of work: Short motivational story. 
+    * I realized that to help people improve their health, you need to support behaviour change.
+    * To improve population health, you need to help people who aren't fitness enthusiasts.
+    * I want to use data and tech to make my impact on a large scale.
+3. Relevant skills/experiences: 1-2 supporting experiences.
+4. Closer: "Really excited to do ..."
+
+* Types of audience dictates length of pitch
+    * small group: 30-60 sec
+    * interview/1-to-1: 2-5 min
+
+## Networking
+* Go with a goal in mind. e.g.
+    * Meet 1 person.
+    * Meet 1 person at this company.
+* Coffee chats: Get others talking about themselves and offer a clear reason for reaching out.
+* Get to know someone, don't just ask for help.
+* How can you help them?
+* Establish next steps.
+    * Follow up on LinkedIn or email.
+    * Have them review your portfolio.
+
+# 2024-05-06 Terminal
+Instructor: Jasleen
+
+command | Description | 
+--- | ----
+`ls -a` | List all files including hidden files.

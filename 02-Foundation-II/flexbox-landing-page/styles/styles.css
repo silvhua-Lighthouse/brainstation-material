@@ -47,10 +47,11 @@ header {
 }
 
 main {
+	display: flex;
 }
 
 .card-list {
-	width: 100%;
+	width: 60%;
 	padding: 35px;
 }
 
@@ -61,20 +62,29 @@ main {
 	background: #eeeeee;
 	box-shadow: 3px 3px 3px #aaaaaa;
 	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .card-content {
-	text-align: center;
+	/* text-align: center; */
+	display: flex;
+	justify-content: center;
+	align-items: end;
 }
 
 .card-title {
 	border-top: dashed 1px #555555;
 	padding-top: 15px;
+	display: flex;
+	justify-content: center;
 }
 
 .activity-list {
 	background: #dddddd;
 	padding: 20px;
+	width: 40%;
 }
 
 .activity-list > * {
@@ -103,3 +113,4 @@ footer {
 
 .footer-left {
 }
+
