@@ -522,3 +522,6 @@ Instructor: Jasleen
 command | Description | 
 --- | ----
 `ls -a` | List all files including hidden files.
+`q` | Exit a menu.
+
+* To use a space character, preceed the space with a backslash `\`.
