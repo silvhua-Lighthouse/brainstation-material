@@ -525,3 +525,38 @@ command | Description |
 `q` | Exit a menu.
 
 * To use a space character, preceed the space with a backslash `\`.
+
+# 2024-05-07 Git
+Instructor: Joseph
+
+## Setting up a repo
+```bash
+git init
+git remote add origin <url>
+git branch -M main
+```
+
+## Everyday workflow
+```bash
+git add .
+git commit -m "message"
+git push
+```
+Command | Description | Imports
+--- | ---- | ---
+`git clone` | Clone a repo which belongs to someone else.
+
+
+# Lab on Git
+* Shifa Afreen Fahim
+    * Moved to Canada from India 6 months ago.
+    * Developed in Flutter.
+* Katherine Osorio
+    * Psychologist.
+    * Has been working for 5 years as a recruiter.
+    * 9 month old child.
+    * Will be job searching when finished program.
+    * Will need to find a daycare.
+
+* Yvette de Sereville
+    * Worked in research doing hardware stuff.
