@@ -560,3 +560,66 @@ Command | Description | Imports
 
 * Yvette de Sereville
     * Worked in research doing hardware stuff.
+
+
+# 2024-05-08 Position & float
+Instructor: Joseph
+
+## Position
+value | Description | Notes
+--- | ---- | ---
+static | Default | Analogous to a book on a bookshelf. You can't move a book without disturbing the order.
+relative | Analogous to your place in a queue being saved.
+absolute | Imagine a parent holding a child and walking. The child's position remains the same relative to the parent as the parent walks. If no parent with position `static` exists, then the position is relative to the document. No space is held for the element.
+fixed | Position relative to the viewport.
+sticky | Acts like absolute or fixed depending on where parent container is in the viewport.
+
+## Float
+* Equivalent to text wrapping around images in Word and that's all it should be used for. It should not be used for positioning elements.
+* Clearfix helps fix items bleeding from their container.
+
+## z-index
+* Similar to `order` in flex in that everything has default value of 0. The higher the value, the more in front it is.
+* z-index affects position in the z-plane while order in the xy-plane.
+
+# 2024-05-08 Sass
+Instructor: Ed
+
+* Mixins are the equivalent of functions.
+* Focus more on variables and mixins for this course. 
+* `@extend` is not as useful in this course because it is not as aligned with BEM. 
+    * It is meant to be used for allowing a selector to inherit properties from its parent.
+* `&` is equivalent to ` ` and ` > ` in CSS selectors.
+*
+
+## BEM review
+* BEM = block__element--modifier
+* Something that stands alone and is re-usable is a block. Otherwise, it is an element.
+* All elements have a parent that has a class.
+* `block__element`: How we name an element.
+* `block--modifier`: How we name a block's modifier.
+* `block__element--modifier`: How we name an element's modifier.
+
+## Partials
+`partials/_colors.scss` (filename must have underscore in front)
+```scss
+$primary: #FFF;
+```
+
+`main.scss`
+```scss
+@use 'partials/colors';
+
+body {
+    color: colors.$primary;
+}
+```
+Alternative `main.scss` to simplify the script:
+```scss
+@use 'partials/colors' as *;
+@use 'partials/mixins' as *;
+
+body {
+    color: $primary;
+}
+```
