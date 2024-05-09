@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>CSS Position & Float Demo</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="navbar__ul">
+        <a class="navbar__link" href="#positions"
+          ><li class="navbar__li">Positions</li></a
+        >
+        <a class="navbar__link" href="#floats"
+          ><li class="navbar__li">Floats</li></a
+        >
+        <a class="navbar__link" href="#stacking"
+          ><li class="navbar__li">Stacking</li></a
+        >
+      </ul>
+    </nav>
+
+    <h1>CSS Position & Float Demo</h1>
+
+    <main>
+      <section id="positions">
+        <h2>Positions</h2>
+        <div class="positions">
+          <div class="positions__item">Static Positioning</div>
+          <!-- Relative: Maintains the document flow. Relative to it's position in flow -->
+          <div class="positions__item positions__item--relative">
+            Relative Positioning
+          </div>
+          <!-- Absolute: Gets taken out of the document flow. Relative to first non-static parent position -->
+          <div class="positions__item positions__item--absolute">
+            Absolute Positioning
+          </div>
+          <!-- Fixed: Gets taken out of the document flow. Relative to the viewport-->
+          <div class="positions__item positions__item--fixed">
+            Fixed Positioning
+          </div>
+          <!-- Sticky: Relative to it's parent. Static until it hits the defined threshold and then behaves as fixed -->
+          <div class="positions__item positions__item--sticky">
+            Sticky Positioning
+          </div>
+        </div>
+      </section>
+
+      <section id="floats">
+        <h2>Floats</h2>
+        <h3>Without clearfix applied</h3>
+        <!-- Without the clearfix styles/solution, the parent won't fit the width of all content -->
+        <div class="floats no-clearfix">
+          <img
+            src="https://m.media-amazon.com/images/I/71OzsMVNAvL._AC_UX569_.jpg"
+          />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus
+            debitis corporis voluptatem sint quas sunt incidunt non
+            consequuntur, aliquam alias consequatur quasi odio iste, natus rerum
+            autem eos facilis saepe!
+          </p>
+          <img
+            src="https://i.guim.co.uk/img/media/43352be36da0eb156e8551d775a57fadba8ae6d7/0_0_1440_864/master/1440.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=1829611852af3ffc6460b4068e20bcbc"
+          />
+          <p>
+            Meow! As a cute little kitten, I may not know much about hockey, but
+            I do know one thing fur sure - the Toronto Maple Leafs are the best
+            team in the NHL! They have pawsome players like Auston Matthews and
+            Mitch Marner who always score goals and make us feline fans purr
+            with delight. Plus, their blue and white jerseys look so adorable
+            and make me want to snuggle up with them. So if you're a hockey fan,
+            you should definitely root for the Maple Leafs - trust me, I'm a
+            kitten, I know these things!
+          </p>
+        </div>
+        <h3>Clearfix applied</h3>
+        <!-- Clearfix is required to make the parent fit the width of all content -->
+        <div class="floats clearfix-modern">
+          <img src="http://placekitten.com/200/300" />
+          <p>
+            Meow there! My name is Tamika CATchings. As a cat, I can tell you
+            why the Indiana Fever is the best WNBA team paws down. First of all,
+            they won the championship in 2012! That's a big accomplishment and
+            shows how talented they are. But that's not all! The Indiana Fever
+            also have a great team spirit and work really well together. They're
+            always supporting each other and never give up, even when the going
+            gets tough. Plus, their home court at Bankers Life Fieldhouse is the
+            purrfect place to watch a game. The atmosphere is electric and the
+            fans are so enthusiastic. It's like a big cat party! So, if you're
+            looking for a team to root for in the WNBA, the Indiana Fever is
+            definitely the cat's meow. They're clearly the best.
+          </p>
+          <img
+            src="https://i.guim.co.uk/img/media/43352be36da0eb156e8551d775a57fadba8ae6d7/0_0_1440_864/master/1440.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=1829611852af3ffc6460b4068e20bcbc"
+          />
+          <p>
+            Meow, meow! While I may be just a tiny kitty, I know that the
+            Indiana Pacers are the best team in the NBA! They have such talented
+            players like Tyrese Haliburton and Bennedict Mathurin who always
+            claw their way to the top. Their yellow and blue jerseys are also so
+            eye-catching and make me want to pounce around like a playful
+            kitten. So if you're a basketball fan, you should definitely cheer
+            for the Pacers. They are the cat's meow!
+          </p>
+        </div>
+      </section>
+
+      <section class="stacking-section" id="stacking">
+        <h2>Absolute Stacking Order</h2>
+        <div class="absolute-stacking">
+          <div
+            class="absolute-stacking__item absolute-stacking__item--red"
+          ></div>
+          <div
+            class="absolute-stacking__item absolute-stacking__item--blue"
+          ></div>
+          <div
+            class="absolute-stacking__item absolute-stacking__item--yellow"
+          ></div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

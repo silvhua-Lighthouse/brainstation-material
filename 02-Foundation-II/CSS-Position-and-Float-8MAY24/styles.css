@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.navbar {
+  height: 4rem;
+  background-color: aqua;
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.navbar__ul {
+  display: flex;
+}
+.navbar__link {
+  margin: 0rem 2rem;
+  text-decoration: none;
+}
+.navbar__li {
+  list-style-type: none;
+}
+
+h1 {
+  margin-top: 4rem; /* This is 4rem because the fixed .navbar is 4rem in height; this allows us to see it. */
+}
+
+section {
+  border: 1px dotted;
+  padding: 1rem;
+  scroll-margin-top: 4rem; /* Without this, when you click the anchors to jump down to a section (at least "Positions" and "Floats" in this case), 
+  the sections' corresponding h2s would be cut off, hidden underneath the fixed navbar.*/
+}
+
+.positions {
+  max-width: 600px;
+  min-height: 1500px;
+  padding: 15px;
+  margin: 0 auto;
+  background-color: honeydew;
+  border: 2px solid green;
+}
+.positions__item {
+  width: auto;
+  height: 150px;
+  padding: 30px;
+  margin-bottom: 1rem;
+  background-color: grey;
+  font-size: 4rem;
+  text-align: center;
+}
+.positions__item--relative {
+  /* position: relative; */
+  top: 3rem;
+  left: 5rem;
+}
+.positions__item--absolute {
+  /* position: absolute; */
+  top: 5rem;
+  right: 6rem;
+}
+
+.positions__item--fixed {
+  /* position: fixed; */
+  top: 0rem;
+}
+
+.positions__item--sticky {
+  /* position: sticky; */
+  top: 0rem;
+}
+
+/* Floats */
+
+.floats {
+  width: 70%;
+  background-color: turquoise;
+  padding: 20px;
+  font-size: 1.5rem;
+}
+
+.no-clearfix {
+  font-size: 1.25rem;
+}
+
+.floats > img {
+  float: left;
+  margin: 15px;
+  width: 50%;
+}
+
+.floats > img:last-of-type {
+  float: right;
+}
+
+/* this is just to give some space between the 2 .floats */
+.floats.no-clearfix ~ h3 {
+  margin-top: 13rem;
+}
+
+/* Clearfix */
+.clearfix-modern:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Stacking */
+.stacking-section {
+  /* I've added this additional styles so that the below elements remain *inside* of its section container. */
+  height: 100%;
+  /* position: absolute; */
+}
+.absolute-stacking {
+  width: 200px;
+  height: 200px;
+  background-color: beige;
+  /* position: absolute; */
+}
+.absolute-stacking__item {
+  width: 100px;
+  height: 100px;
+  /* position: absolute; */
+}
+.absolute-stacking__item--red {
+  background-color: red;
+}
+.absolute-stacking__item--blue {
+  background-color: blue;
+  z-index: 1;
+  top: 10px;
+  left: 10px;
+}
+.absolute-stacking__item--yellow {
+  background-color: yellow;
+  z-index: 2;
+  top: 20px;
+  left: 20px;
+}
