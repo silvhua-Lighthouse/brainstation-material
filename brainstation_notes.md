@@ -623,3 +623,107 @@ body {
     color: $primary;
 }
 ```
+# 2024-05-09 Typography & Fonts
+Instructor: Ed
+
+* A typeface is a collection of letters and symbols.
+* A font is a specific size, weight, or style of a type face.
+    * Back in the days of the printing press, you needed a separate tile for every variation of a letter, e.g. upper case, bold, size.
+* Font-family is synonym for typeface.
+
+Families of typefaces:
+* All fall into one of these:
+    * Serif
+    * Sans-serif 
+* Other classes:
+    * Monospace
+    * Cursive
+    * Fantasy
+
+Adjusting font size
+* Use a modular scale: pick a modifying unit and scale up your rem units based on this modifier.
+    * e.g. `p` and `h6` can be the same size, then multiply by 1.4 for the next level.
+* `@font-face` allows you to load a custom font-family. Mandatory properties:
+    * `font-family`
+    * `src`
+
+## `@font-face`
+```css
+@font-face {
+    font-family: 'Gugi';
+    src: url('path/to/Gugi-Regular.woff2') format('woff2');
+}
+
+.success {
+    font-family: 'Gugi';
+}
+```
+* The `format` value for the font-family isn't always the same as the file extension.
+* If wanting a different `font-weight` or `font-style`, the files used are different than for default:
+    * Specify these properities in the `@font-face` block.
+    * Load the appropriate file
+```css
+@font-face {
+    font-family: 'Gugi';
+    src: url('path/to/gugi-bold-italic.woff2') format('woff2');
+    font-weight: bold;
+    font-style: italic;
+}
+```
+* `woff` and `woff2` file types are optimized for performance and have excellent browser support.
+    * Safari is the one browser that doesn't automatically update fonts.
+    * `caniuse.com` checks for browser support. 
+
+* `woff2` is the best format. Use `woff` as the fallback option.
+    * Browser checks the first option in `src` property before checkin the next on the list.
+```
+@font-face {
+    font-family: 'Gugi';
+    src: url('path/to/Gugi-Regular.woff2') format('woff2'), 
+        url('path/to/Gugi-Regular.woff') format('woff')
+}
+```
+Considerations for choosing fonts:
+* Language support
+* Ligature support
+    * How many different combinations of letters have the letters connected?
+    * Decided upon by designed.
+* File size
+
+## At-rules for CSS
+* Tells the browser how to behave.
+* Can be used to declare reusable CSS
+* Include the next CSS statement
+
+* **Note**: If using SCSS file, the final CSS file MUST reference the font family files to work. Beware if using different relative paths.
+
+# 2024-05-09 CSS Animations
+Instructor: Jaslee
+
+## Animatable properties
+* font-size
+* letter-spacing
+* width and height
+* border-radius
+* color
+* opacity
+
+* CSS Transforms apply to an element.
+
+## Keyframe animations
+* Keyframes are a way to set markers at different times from 0 to 100%, which we use to change CSS property values.
+* animation can run when the page loads. After, would need to reload the page to see the animation.
+
+```css
+@keyframes color-change {
+    from {background-color: red;}
+    to {background-color: blue;}
+}
+
+.animated-element {
+    animation: color-change 5s;
+}
+```
+* `+` in a selector is the same as "and".
+* `pointer-events: none` allows for smoother transition to `:hover` state.
+* Too much animation can make the code hard for developers to read and hard for viewed due to accesibility issues.
