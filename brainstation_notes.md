@@ -727,3 +727,36 @@ Instructor: Jaslee
 * `+` in a selector is the same as "and".
 * `pointer-events: none` allows for smoother transition to `:hover` state.
 * Too much animation can make the code hard for developers to read and hard for viewed due to accesibility issues.
+
+# 2024-05-10 Responsive design
+Instructor: Ed
+
+* Mobile-first design philosophy: Design for the mobile first as it is harder due to the smaller screen.
+
+Important things:
+* Media queries 
+* Viewport meta tags are in the HTML head
+
+## Media queries
+
+Property | Description | Notes
+--- | ---- | ---
+`min-width`
+`max-width`
+`min-height`
+`max-height`
+`orientation=portrait`
+`orientation=landscape`
+
+* Most of the time, we just use the page width is the media query
+* Media type includes print or screen
+
+* SVG is the preferred image type for responsive design
+* Even when using mobile-first design, it is important to thinking about what the site will look like on different sites before implementing.
+* Mobile-first implementation means that the default display is for mobile.
+* When a selector is repeated, the rules that are lowest on the page are applied.
+
+# Lab: Responsive Design
+* Charlotte He
+* Ola Awesu
+* Sarah Hooshmead
