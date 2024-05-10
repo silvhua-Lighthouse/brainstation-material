@@ -15,8 +15,8 @@ $desktop-width: 1280px;
 
 @mixin layout {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
 * {
@@ -39,8 +39,11 @@ body {
     }
 
     &__links {
-        display: flex;
-        gap: 0.5rem;
+        display: none;
+        @include tablet {
+            @include layout;
+            gap: 0.5rem;
+        }
     }
 }
 
@@ -56,10 +59,13 @@ body {
 }
 
 main {
-    @include layout;
-    align-items: flex-start;
     border-top: 5px solid #999999;
     border-bottom: 5px solid #999999;
+    @include tablet {
+        @include layout;
+        align-items: flex-start;
+
+    }
 }
 
 .article-list {
