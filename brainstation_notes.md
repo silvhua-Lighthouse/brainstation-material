@@ -760,3 +760,27 @@ Property | Description | Notes
 * Charlotte He
 * Ola Awesu
 * Sarah Hooshmead
+
+# 2024-05-10 Git Branching
+Instructor: Jasleen
+
+* Git branches can be used to work on different blocks of a webpage, e.g. header has its own branch.
+* Best practice for a new branch to contain commits related to a specific feature or update in your project.
+
+Command | Description | Notes
+--- | ---- | ---
+`git branch` | Show branches
+`git checkout -b <branchname>` or `git switch -c <branchname>` | Creates a new local branch and switches to that branch.
+`git checkout <branchname>` | Switches to an existing branch.
+`git merge <branchname>` | Merges the branch into the current branch.
+`git pull` | Pulls the latest updates from `main` branch.
+`git rebase main` | Can be used to reverse some changes (unclear about details). Should only be done when the branch has nothing that hasn't been pushed or stashed.
+`git stash` | Store the line of code.
+`git stash pop` | Restore the line of code from `git stash`.
+`git stash list` | Show the stash list.
+
+Branch naming conventions:
+* Concise
+* Descriptive of the code that you are writing on that branch.
+
+* Either a pull request or merge can be used to update main branch when working on your own on a project.
