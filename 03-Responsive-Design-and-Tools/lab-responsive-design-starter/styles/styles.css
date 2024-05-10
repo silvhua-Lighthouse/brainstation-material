@@ -67,6 +67,16 @@ main {
     justify-content: center;
   }
 }
+@media (min-width: 1280px) {
+  .article-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
 
 .article {
   background-color: #eeeeee;
@@ -77,6 +87,11 @@ main {
 @media (min-width: 768px) {
   .article {
     width: 100%;
+  }
+}
+@media (min-width: 1280px) {
+  .article {
+    width: 150px;
   }
 }
 .article__title {
@@ -100,7 +115,7 @@ main {
 }
 @media (min-width: 1280px) {
   .weather-list {
-    margin-left: 9.375rem;
+    margin-left: 3 rem;
   }
 }
 
