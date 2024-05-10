@@ -784,3 +784,7 @@ Branch naming conventions:
 * Descriptive of the code that you are writing on that branch.
 
 * Either a pull request or merge can be used to update main branch when working on your own on a project.
+
+# Lab: Git Branching
+* Samantha Sun
+* Lindsay Renna
