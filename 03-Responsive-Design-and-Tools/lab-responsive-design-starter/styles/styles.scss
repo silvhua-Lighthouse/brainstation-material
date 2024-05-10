@@ -70,10 +70,13 @@ main {
 
 .article-list {
     background-color: #fdfdfd;
-    width: 100%;
-    @include layout;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    @include tablet {
+        @include layout;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
 }
 
 .article {
@@ -81,7 +84,11 @@ main {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     margin: 1rem;
-    width: 150px;
+    @include tablet {
+        width: 100%;
+        // width: 150px;
+
+    }
 
     &__title {
         margin: 0;
@@ -103,7 +110,10 @@ main {
     background-color: #dddddd;
     padding: 1rem;
     display: inline-block;
-    margin-left: 9.375rem;
+    @include desktop {
+        margin-left: 9.375rem;
+
+    }
 }
 
 .weather {
