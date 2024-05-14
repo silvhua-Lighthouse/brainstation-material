@@ -46,3 +46,4 @@ function addNumber(num1, num2) {
 }
 // The result of the addNumber(17, 25) invocation should be 42.
 console.log(addNumber(17, 25));
+console.log('Silvia', 'Hua')
