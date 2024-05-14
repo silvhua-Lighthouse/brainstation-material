@@ -837,3 +837,8 @@ Instructor: Roberta
 ## Comparison operators
 * `===` means strictly equals, requiring both the value and data type to be the same. 
     * `==` is not the same.
+
+# 2024-05-14 Data Structure
+Instructor: Jasleen
+
+* Non-primative data types can contain multiple values.
