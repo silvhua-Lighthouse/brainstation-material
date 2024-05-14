@@ -788,3 +788,52 @@ Branch naming conventions:
 # Lab: Git Branching
 * Samantha Sun
 * Lindsay Renna
+
+# 2024-05-13 Morning Challenges
+Instructor: Daniil Molodkov
+From Toronto
+
+* Word problems
+* Debugging code
+* Technical questions of varying skill levels
+
+## Word problems
+Meant to convey your thought process without the need to write semantic code. 
+
+e.g. If you have a 7 minute hourglass and an 11 minute hourglass, how can you measure exactly 15 minutes.
+
+## Technical questions
+1. Think about the question and what is being asked of you.
+2. Determine the important factors of the questions and what type of result you should be delivering.
+3. Can clarify the requirements of the question by writing an input/output or starting/finishing values.
+4. Write your solution in plain english before attempting to write a code solution.
+5. Keep in mind there is always more than 1 way to solve a problem. Sometimes the first solution isn't the best.
+
+# 2024-05-13 Thinking like a Programmer
+Instructor: Roberta Nin Feliz
+* In New York
+* Used to work at Peloton
+
+## Flow charts
+* Every function call takes up memory, so infinite loops eventually lead to an error message.
+
+# 2024-05-14 JavaScript Fundamentals
+Instructor: Roberta
+
+* types of programming languages:
+    * Interpreted/higher level: e.g. Python, JavaScript
+    * Machine/compiled 
+* Originally, JS could only be run in browser so you needed something else in the backend. Now, something like Node allows JS to be run in the backend as well.
+* JS allows for asynchronous processes on the web.
+
+## Data Types
+* There is a separate number data type for very large numbers (not int or float) to reduce memory.
+* `var` is not a favoured way to declare variables because it gets hoisted to the top of the program
+
+## Operators
+* In a for loop, use post - increment operator, e.g. `i++`
+* Pre-increment operator: Use it when you need the increment to happen before something happens, e.g. when using `console.log`
+
+## Comparison operators
+* `===` means strictly equals, requiring both the value and data type to be the same. 
+    * `==` is not the same.
