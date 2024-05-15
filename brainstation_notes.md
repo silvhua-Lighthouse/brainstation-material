@@ -842,3 +842,12 @@ Instructor: Roberta
 Instructor: Jasleen
 
 * Non-primative data types can contain multiple values.
+
+# 2024-05-15 Control flow
+Instructor: Daniil
+* `if/else` statements must evaluate to a boolean, whereas `switch`statements do not.
+
+# 2024-05-15 Functions
+Instructor: Jasleen
+
+* We will lose marks if we return an expression without initializing the variable to return
