@@ -851,3 +851,38 @@ Instructor: Daniil
 Instructor: Jasleen
 
 * We will lose marks if we return an expression without initializing the variable to return
+
+# 2024-05-16
+Instructor: Roberta
+
+* If passing a function as an argument, do not use parentheses.
+    * If passing a function as an argument and that function also takes arguments, then wrap the function in an anonymous function.
+
+```JavaScript
+setTimeout(function() {
+    myFunc('executes after 500ms');
+}, 500)
+```
+
+* Arrow functions are a newer shorthand for anonymous functions.
+
+```JavaScript
+setTimeout(() =>  {
+    //function body
+}, 2000)
+```
+* `let` and `const` use block scoping rules while `var` does not.
+* Variables declared in `<script></script>` tags outside any curly braces are global variables.
+    * These are accessible from anywhere and in anyfile.
+* Use global variables sparingly to avoid polluting the global scope. 
+    * More globals means more risk of a naming collision.
+    * Create variables with block-scope instead.
+* If a function only has one line to return the result, can remove the `return`:
+
+```JavaScript
+cons sumTwoNums = (a, b) => {
+    return a + b
+}
+// can be rewritten as:
+cons sumTwoNums = (a, b) => a + b;
+```
