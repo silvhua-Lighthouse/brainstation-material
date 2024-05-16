@@ -886,3 +886,8 @@ cons sumTwoNums = (a, b) => {
 // can be rewritten as:
 cons sumTwoNums = (a, b) => a + b;
 ```
+
+# 2024-05-16 Emerging technologies: AI
+Instructor: Daniil
+
+* Unlike algorithms in general, AI algorithms are capable of learning and adapting.
