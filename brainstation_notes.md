@@ -891,3 +891,19 @@ cons sumTwoNums = (a, b) => a + b;
 Instructor: Daniil
 
 * Unlike algorithms in general, AI algorithms are capable of learning and adapting.
+
+# 2024-05-17 Document Object Modelling
+Instructor: Daniil
+
+* `document.querySelectorAll()` returns a `NodeList` which is an array-like data type of all elements matching the selector.
+
+Object interfaces:
+* Document
+* Element
+* NodeList
+
+## Modifying CSS
+* It is generally bad practice to use DOM to modify CSS.
+    * Styling will get added inline to HTML (not ideal)
+    * One example use case is if you have a user's favourite colour stored in a database.
+* Replace kabab-case with camel case when specifying the property in JavaScript
