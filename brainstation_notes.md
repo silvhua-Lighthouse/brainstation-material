@@ -880,11 +880,11 @@ setTimeout(() =>  {
 * If a function only has one line to return the result, can remove the `return`:
 
 ```JavaScript
-cons sumTwoNums = (a, b) => {
+const sumTwoNums = (a, b) => {
     return a + b
 }
 // can be rewritten as:
-cons sumTwoNums = (a, b) => a + b;
+const sumTwoNums = (a, b) => a + b;
 ```
 
 # 2024-05-16 Emerging technologies: AI
@@ -907,3 +907,37 @@ Object interfaces:
     * Styling will get added inline to HTML (not ideal)
     * One example use case is if you have a user's favourite colour stored in a database.
 * Replace kabab-case with camel case when specifying the property in JavaScript
+
+# 2024-05-21 Event Handling & Callbacks
+Instructor: Daniil
+
+* Anonymous functions are used if you won't need to make a callback to it.
+
+## Browser events
+* Which element?
+* Which event?
+
+How to add event handlers
+* `addEventListener(functionName)` is the most common way of assigning handlers to elements.
+* Using an `.on` method. More limited. Legacy method.
+* Inline in HTML. Legacy method and not recommended.
+
+
+```JavaScript
+
+function buttonHandler(event) { // `event` parameter is optional and can be named anything
+    console.log('Clicked');
+}
+
+button.addEventListener('click', buttonHandler);
+
+```
+* `element.removeEventListener()` can be used if wanting to allow an event to happen once only.
+* All events create an `Event` object. Some properties are common to all event types, some are not. Example properties:
+    * `event.target.value`
+    * `event.key`
+
+
+* Some Events trigger a default behaviour. Use `event.preventDefault()`  to avoid this.
+* Event bubbling: Event sequence starts with the most nested element, i.e. inside out.
+    * Use `event.stopPropagation` to prevent further propagation of the current event.
