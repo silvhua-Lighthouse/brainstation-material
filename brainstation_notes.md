@@ -941,3 +941,19 @@ button.addEventListener('click', buttonHandler);
 * Some Events trigger a default behaviour. Use `event.preventDefault()`  to avoid this.
 * Event bubbling: Event sequence starts with the most nested element, i.e. inside out.
     * Use `event.stopPropagation` to prevent further propagation of the current event.
+
+# 2024-05-22 HTML forms
+Instructor: Roberta
+
+* Default behaviour when clicking the submit button on a form: refreshes the page. 
+    * May not be great for the user.
+* Default form input is `text` but best to include it explicitely anyway.
+* `name` attribute allows you to access form values in JavaScript.
+* Best practice for submitting a form is:
+
+```HTML
+<button type="submit">submit button</button>
+```
+* Hidden form fields can be used to store information, e.g. session ID
+    * Do not store sensitive information as it can still be viewed when user inspects source code.
+
