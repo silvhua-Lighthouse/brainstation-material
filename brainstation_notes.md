@@ -957,3 +957,31 @@ Instructor: Roberta
 * Hidden form fields can be used to store information, e.g. session ID
     * Do not store sensitive information as it can still be viewed when user inspects source code.
 
+# 2024-05-22 Coercions and conversions
+Instructor: Roberta
+
+* `NaN !== NaN`
+* Empty arrays and objects are still truthy
+* JavaScript performs automatic type conversions, called coercion, when passing values of different types to an operator, e.g. `"2" + 2 === "22"`
+* Every `+` operation not involving two numbers will coerce both operands to strings.
+    * The exception is boolean values, which get converted to 0 or 1.
+* Abstract equality (`==`) allows for coercion: `'1' == 1 // true`
+* Arrays are stored in memory, unlike primitives which are stored in the program. Variables that are arrays actually store the location of the values in memory, not the actual values. 
+* Use `!!` in front to convert a value to a boolean: `!!3` -> `true`
+
+Expression | Description | Notes
+--- | ---- | ---
+[double pipe]* | If the first operand is truthy, it is returned. Otherwise, it returns the 2nd operand. | To short-circuit an expression to improve efficiency, place the operand that is more likely to be true first. e.g. `const newValue = quickLookup() [double pipe] expensiveFunction();`
+`&&` | If the first operand is falsy, it is returned. Otherwise, it returns the 2nd operand. | Can be used for short-circuiting. e.g. `if (obj && obj.property) {...}` -> Doesn't check the object property if `obj` is null or undefined.
+`??` | Returns first operand if it is not null/undefined. Otherwise, it returns the second operand. | Useful for setting default values.
+`?.` | Optional chaining. | Used to avoid errors from checking properties of undefined values. 
+`{...arrayOrObject}` | Spread operator. Makes a copy of a variable.
+
+* **[double pipe] means `||`**
+
+## Review session
+* how to add default arguments
+* How to export/import functions
+
+* `element.src`, `element.href`
+* To iterate over form values: `formElement.elements`
