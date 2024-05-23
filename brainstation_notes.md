@@ -985,3 +985,7 @@ Expression | Description | Notes
 
 * `element.src`, `element.href`
 * To iterate over form values: `formElement.elements`
+
+# 2024-05-23 Higher order functions
+Instructor: Daniil
+
