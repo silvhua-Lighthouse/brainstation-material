@@ -988,4 +988,33 @@ Expression | Description | Notes
 
 # 2024-05-23 Higher order functions
 Instructor: Daniil
+* Higher order functions are functions that take other functions as an argument.
+
+# 2024-05-23 HTTP
+Instructor: Roberta
+
+* HTTPS is HTTP that is secured by encryption
+* Encryption based on keys to encrypt/decrypt data
+* Keys must be certified by a third party
+* Data is encrypted before leaving client/server
+* Only client/server can decrypt the data
+* SSL stands for Secure Sockets Layer and was renamed to TLS (Transport Layer Security)
+
+## Web addresses
+`http://dev.server.com:8080/search?id=123&page=1#result`
+
+Command | Description | Notes
+--- | ---- | ---
+`http` | protocol
+`dev.` | subdomain
+`server.com` | domain
+`8080` | port
+`search` | path
+`id=123&page=1#` | parameters | syntax: `key=value` pairs joined by `&`
+`#result` | fragment | e.g. page header
+
+## HTTP Methods
+* HTTP requests include a method. The most common are `GET` and `POST`.
+    * `PUT` will update a resource.
+    * `DELETE` deletes a resource.
 
