@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab: Web APIs</title>
+
+  <style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      display: block;
+      margin-top: 1rem;
+    }
+  </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>Web API Response</h1>
+
+  <section>
+    <h2>Current Page</h2>
+    Page <span class="page-number">0</span>/<span class="total-pages">0</span>
+  </section>
+
+  <section>
+    <h2>Users</h2>
+    <ul class="users">
+      <li class="user">
+        <img class="user__avatar" src="https://via.placeholder.com/100" />
+        <span class="user__name">Jane Doe</span>
+        —
+        <span class="user__email">jane.doe@example.com</span>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Current Ad</h2>
+    <span class="ad"></span>
+  </section>
+</body>
+</html>

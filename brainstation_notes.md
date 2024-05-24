@@ -1018,3 +1018,62 @@ Command | Description | Notes
     * `PUT` will update a resource.
     * `DELETE` deletes a resource.
 
+# 2024-05-24 Web APIs & Axios
+Instructor: Daniil
+
+* HTTP requests only accept strings and not objects. JSON was a way to represent objects as a string.
+* Main differences between JSON and JavaScript object:
+    * extra commas after last item are not allowed.
+
+Command | Description | Notes
+--- | ---- | ---
+`JSON.stringify()` | Turns a JS object into a JSON.
+`JSON.parse()` | Turns a string in JSON format into a JS object.
+`await` | Used in front of asynchronous functions
+`await axios.get(url)` | Send a GET request from the Web API. | Response is provided by `.data` attribute of response object
+`await axios.post(url)` | 
+
+* Axios is a JS HTTP client library. 
+    * Can embed a line in the HTML file (which provides access to `.js` file via their content delivery network), or download the `.js` file directly. 
+        * The line is available on their GitHub.
+* `fetch` is another way to make HTTP requests.
+
+```JavaScript
+try {
+    //code here
+} catch (error) {
+    console.log(error);
+}
+```
+* Use `async` function before `await`
+
+```JavaScript
+async function functionName () {
+    // function body
+}
+
+
+const functionName = async () => {
+    // function body
+}
+
+const DOG_API_URL = "<url>";
+
+const fetchRandomDog = async () => {
+    try {
+        const dogImageResponse = await axios.get(DOG_API_URL);
+    } catch (err) {
+        console.log("Couldn't fetch your dog");
+    }
+}
+```
+mockapi.io allows you to create mock endpoints
+
+```JavaScript
+albumsForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    // anonymous function body for event listener
+
+    e.target.reset(); // reset the form
+})
+```
