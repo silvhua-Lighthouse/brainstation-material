@@ -1077,3 +1077,63 @@ albumsForm.addEventListener('submit', async (e) => {
     e.target.reset(); // reset the form
 })
 ```
+
+# 2024-05-24 Object oriented programming
+Instructor: Jasleen
+
+```JavaScript
+class Person { 
+    constructor(name, age, height) {
+        // This is a constructor that creates the instance of the class and sets its properties.
+        this.name = name;
+        this.age = age;
+        this.height = height;
+    }
+    sayHello () {
+        // this is a method
+        return 'Hi my name is' + this.name;
+    }
+}
+
+let personA = new Person ('John', 29, 160);
+let personB = new Person ('Emma', 24, 154);
+```
+* The `new` keyword creates a new instance of the class.
+* Class methods are like functions but also have access to the object instance's properties using the `this ` keyword.
+
+## `async` class methods
+
+When calling the `async` class method from other code, use the `await` keyword both within the method definition and before invoke the method to ensure we get the method's return value.
+
+```JavaScript
+class Student {
+    constructor(studentId) {
+        this.studentId = studentId;
+    }
+    async getCourses() {
+        const courses = await StudentApi.getCourses(this.studentId);
+        return courses;
+    }
+}
+
+const alice = new Student(123);
+const aliceCourses = await alice.getCourses();
+```
+* Prototypal chain: JS will look up the chain for properties and methods and use the closest one found.
+
+```JavaScript
+class Student extends Person {
+    constructor(name, age, height, gpa) {
+        super(name, age, height); // Run the base/original class's constructor function
+        this.gpa = gpa;
+    }
+
+    studentMethod() {
+        // Use `super` to wrap the base class's method
+        // Useful if wanting to pass arguments that are specific to the child class
+        super.sayHello(); 
+    }
+}
+
+let student1 = new('Bob', 40, 160, 4);
+```
