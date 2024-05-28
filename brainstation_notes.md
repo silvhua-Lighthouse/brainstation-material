@@ -1156,3 +1156,101 @@ const results = await Promise.all([
 ]);
 ```
 If using this in a try/catch block, the promise wil be rejected if any of them reject.
+
+# 2024-05-28 Modern JavaScript Features
+Instructor: Roberta
+
+## Destructuring
+* The # of items to extract doesn't have to match # of elements in the array/object
+```JavaScript
+//destructuring objects
+let movie = {
+    title: "Star Wars",
+    director: "George Lucas"
+}
+
+let {title, director} = movie;
+
+// destructuring arrays
+let [pos1, pos2] = ['apple', 'pear', 'kiwi'];
+console.log(pos1); // 'apple'
+console.log(pos2); // 'pear'
+```
+
+Properties can be renamed
+```JavaScript
+let student = {
+    age: 25,
+    name: "Johnny"
+}
+
+let {age, name: studentName} = student; // renames `name` property to `studentName`
+```
+## Rest property
+* Allows you to store remaining items in an object/array as a single variable when destructuring variables.
+```JavaScript
+const options = {
+    title: "Menu",
+    height: 100, 
+    width: 200
+}
+const {title, ...rest} = options; //`rest` can be named anything
+console.log(rest); // {height: 100, width: 200}
+```
+* Rest parameter allows you to create a function with a variable number of parameters
+```JavaScript
+function abc(a, ...rest) {
+    return rest;
+}
+console.log(abc(10, 2, 3, 4)); // prints [2, 3, 4]
+```
+* If used on an object where none of the properties are destructured, it returns an array containing the object.
+
+## Spread operator (`...`)
+* Lets an object expand its values.
+* Useful for copying objects and working with objects immutably
+
+* The rest property compresses objects whereas the spread operator expands the objects.
+
+## JavaScript Modules
+
+```JavaScript
+//main.js
+
+import myObject from './myPackage.js';
+```
+```JavaScript
+//myPackage.js
+
+export default myObject;
+```
+* Each module can have 1 default export
+```html
+<script src="./script.js" type="module"></script>
+```
+
+Anatomy of an import statement
+```JavaScript
+import getDayOfMonth, {nMonths, getHour} from './dateUtils.js';
+// getDayOfMonth is the default import. nMonths and getHour are named imports.
+```
+
+### Default exports/imports
+```JavaScript
+// define the default (unnamed) export
+export default function( {
+    return new Date().getDate();
+})
+```
+```JavaScript
+//import the default export from 'dateUtils'
+import getDate from './dateUtils.js' 
+// the unnammed export is given the name `getDate`
+```
+
+Renaming named imports
+```JavaScript
+import {nMonths as numMonths} from './dateUtils.ms'
+```
+# 2024-05-28 Leveraging LinkedIn 
+Instructor: Emma Fullante
