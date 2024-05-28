@@ -1137,3 +1137,22 @@ class Student extends Person {
 
 let student1 = new('Bob', 40, 160, 4);
 ```
+# 2024-05-27 Promises
+Instructor: Daniil
+
+* `async`/`await` keywords are the updated version of `.then()`/`.catch()` methods
+* `setTimeout()` allows for asynchronous execution. It is not the same as sleep.
+* When calling an async function/method, need to use `await` before invoking it.
+
+## `Promise.all()`
+Takes an array of promises and returns a single promise.
+* Results will be in the same order as in the array regardless of order at which the promises resolve.
+
+```JavaScript
+const results = await Promise.all([
+    axios.get(url1),
+    axios.get(url2),
+    axios.get(url3)
+]);
+```
+If using this in a try/catch block, the promise wil be rejected if any of them reject.
