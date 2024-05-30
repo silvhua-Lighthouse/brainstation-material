@@ -1284,3 +1284,8 @@ appEl = document.getElementById('app')
 appEl.innerHTML = HomePage(); 
 ```
 
+const HomePage = () => {
+    return `
+    ${HeroBanner("./images/dog-banner.jpg", "dog-img")}
+    `
+}
