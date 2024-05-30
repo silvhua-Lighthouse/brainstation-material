@@ -1254,3 +1254,33 @@ import {nMonths as numMonths} from './dateUtils.ms'
 ```
 # 2024-05-28 Leveraging LinkedIn 
 Instructor: Emma Fullante
+
+# 2024-05-30 Components
+Instructor: Jasleen
+
+Web components are made up of:
+* custom elements
+* shadow DOM
+* reusable HTML
+
+```JavaScript
+// component
+const HeroBanner = (imgURL, imgText) => {
+    return `
+    <header>
+    <img src=${imgURL} alt=${imgText} />
+    </header>
+    `
+}
+
+// component with a nested component
+const HomePage = () => {
+    return `
+    ${HeroBanner("./images/dog-banner.jpg", "dog-img")}
+    `
+}
+
+appEl = document.getElementById('app')
+appEl.innerHTML = HomePage(); 
+```
+
