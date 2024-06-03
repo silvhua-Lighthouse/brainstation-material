@@ -1289,3 +1289,62 @@ const HomePage = () => {
     ${HeroBanner("./images/dog-banner.jpg", "dog-img")}
     `
 }
+
+# 2024-05-31 Intro to React
+Instructor: Daniil
+
+* Components in Vanilla JS are not best practice due to security risk
+* Component functions should be capitalized to avoid confusion with HTML elements.
+
+
+
+```JavaScript
+function HelloMessage() {
+    return <div>Hello, World</div>;
+}
+
+ReactDOM
+    .createRoot(document.getElementById('root'))
+    .render(
+        <React.StrictMode>
+            <HelloMessage />
+        </React.StrictMode>
+    );
+```
+
+
+```JavaScript
+import './App.scss';
+import Header from './Header'; // component function from another .jsx file
+
+function App() {
+    return (
+        <main>
+            <Header /> // this is a component we defined
+            <h1>Hello, world</h1>
+        </main>
+    )
+}
+
+export default App
+```
+
+# 2024-06-03 JSX
+Instructor: Roberta
+
+* Changes in HTML when used in JSX
+    * `class` attribute -> `className`
+    * `for` attribute -> `htmlFor`
+
+# 2024-06-03 Props
+Instructor: Jasleen
+
+* Integer prop values can optionally be in `{}` 
+* Reserved prop names should not be used in custom prop ksys:
+    * `ref`
+    * `key`
+* If iterating over an array to create elements, use the `key` attribute in the element which takes a unique id as a value.
+
+Command | Description | Notes
+--- | ---- | ---
+`rfce` | snippet for creating JSX component
