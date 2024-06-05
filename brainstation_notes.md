@@ -1348,3 +1348,62 @@ Instructor: Jasleen
 Command | Description | Notes
 --- | ---- | ---
 `rfce` | snippet for creating JSX component
+
+# 2024-06-04 Event Handlers in React
+Instructor: Roberta
+
+```JavaScript
+const Parent = () => {
+    const ClickHandler = () => {
+        console.log('In Parent');
+    }
+}
+// When button is clicked, function in parent will be called.
+const Child = props => {
+    <button onClick={props.ClickHandler}>Click Me </button>
+}
+```
+[State: A Component's Memory](https://react.dev/learn/state-a-components-memory)
+
+# 2024-06-04 State in React
+Instructor: Jasleen
+
+# 2024-06-05 React Dev Tools
+Instructor: Daniil
+
+* Components update when there is:
+    * State change
+    * change in props
+
+# 2024-06-05 Client Side Routing
+Instructor: Daniil
+
+React snippet | Description | Notes
+--- | ---- | ---
+`rsc` | React stateless component
+
+Conditional rendering 
+```JavaScript
+function App() {
+    let [currentPage, setCurrentPage] = useState('home');
+
+    return (
+        <>
+            <Header/>
+            <Nav/>
+            {currentPage === 'home' && <HomePage/>}
+            {currentPage === 'about' && <AboutPage/>}
+            <Footer/>
+        </>
+    )
+}
+```
+* DDAU: Data down actions up. Data flows from parent to children components. Actions allow children to pass information to parent.
+
+
+* `history.pushState({}, null, newUrl)` allows you to update the URL even for single page applications
+
+# 2024-06-05 Review
+Instructor: Daniil
+* Browser console shows logged statements twice in React due to `React.StrictMode` in `main.jsx. 
+
