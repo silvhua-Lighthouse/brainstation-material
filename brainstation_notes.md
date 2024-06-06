@@ -1407,3 +1407,77 @@ function App() {
 Instructor: Daniil
 * Browser console shows logged statements twice in React due to `React.StrictMode` in `main.jsx. 
 
+# 2024-06-06 React Router
+Instructor: Daniil
+
+`npm install react-router-dom`
+
+
+
+```JavaScript
+import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom"
+import HomePage from '.pages/HomePage'
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
+
+function App() {
+    return (
+        <BrowserRouter>
+            <Header />
+            <Routes>
+                <Route path="/" element = {<HomePage />} />
+                <Route path="about" element = {<AboutPage />} />
+                <Route path="*" element={<NotFoundPage/>} /> // custom Error 404 page
+                <Route path="black-friday-sale" element={<Navigate to="/about" />}/> // redirect to about page
+            </Routes>
+            <Footer />
+        </BrowserRouter>
+    )
+}
+
+export default App
+```
+
+```JavaScript
+// Nav component
+import {Link} from 'react-router-dom'
+
+import './Nav.scss';
+
+const Nav = () => {
+    return (
+        <nav>
+            <ul>
+                <li>
+                    <Link className="nav-link" to="/">Home</Link>
+                </li>
+                <li>
+                    <Link className="nav-link" to="about">About</Link>
+                </li>
+            </ul>
+        </nav>
+    )
+}
+
+export default Nav
+```
+
+## Dynamic URLs
+
+```JavaScript
+(
+    <Routes>
+        <Route path="users" element={<UsersList />} />
+        <Route path="users:/userId" element={<UserProfile />} /> 
+    </Routes>
+)
+// The colon in front of `userId` is like a variable; it will be used as a key name
+
+
+import { useParams } from 'react-router-dom';
+
+function UserProfile() {
+    const params = useParams();
+    return <div>{params.userId}</div>
+}
+```
