@@ -1481,3 +1481,99 @@ function UserProfile() {
     return <div>{params.userId}</div>
 }
 ```
+
+# 2024-06-07 `useEffect` & Axios
+Instructor: Roberta
+
+```JavaScript
+useEffect (() => {
+  // body of useEffect callback, aka side effect
+}, [dependency])
+```
+
+* A `useEffect` listens to changes in dependencies and re-renders the component when that happens.
+    * If it has no dependencies, it will run after every render of a component.
+* If state or props are modified from within the side effect, this will casuse an infinite loop of updates.
+    * these should be put inside of a dependency array.
+* a `useEffect` with an empty dependency will only run after the initial mount of the component.
+
+
+* To fetch data once when the component renders:
+```JavaScript
+const App = () => {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    // fetch and set user data here
+    setUser('Garfield');
+  }, [])
+}
+```
+
+Fetch data with a dynamic route:
+```JavaScript
+const {id} = useParams();
+
+useEffect(() => {
+  const fetchUser = async () => {
+    const response = await axios.get(
+    `https://example.com/users/${id}`
+    );
+    SpeechSynthesisUtterance(response.data);
+  }
+
+  fetchUser();
+})
+```
+
+# 2024-06-11 REST & SPA
+Instructor: Roberta
+
+# 2024-06-11 Storing data in the browser
+Instructor: Jasleen
+
+## `localStorage`
+* Stores ~10MB of data
+* Avoid storing sensitive info here because anyone w/ access to the device can access this info.
+
+## `sessionStorage`
+* Stores ~5MB of data
+
+## Cookies
+* A small text document that is sent and/or received in the HTTP connection for the browser
+* Can be used to remember who you are and your past behaviours
+* Confined to whatever domain created it
+* Stores 4 kb, the least amount of data
+
+### Cookie structure
+* 3 parts: 
+    * key
+    * value
+    * attributes, e.g. expiry date
+
+* Cookes survive after the browser closes and can have an expiry date that says when it should be deleted
+
+* `js-cookie`: JS library that uses an API that is similar to `localStorage`
+
+Use cookies if | Use `localStorage` if
+--- | ---
+You need data to expire | Data only needs to be seen on client side
+You need the data to be visible to the server | You need more storage than cookies provide
+
+# 2024-06-12 Intro to node
+Instructor: Danill
+
+Command | Description | Notes
+--- | ---- | ---
+`npm init` | Initializes a project by initializing a `package.json` file | More minimal than `npm create vite`
+`npm init -y` | The `-y` flag allows you to initialize a project w/o answering the questions. | You can later edit the `package.json` file to answer the skipped questions.
+`process.exit()` | Stops running the `.js` file.
+
+# 2024-06-13 Express I
+Instructor: Daniil
+
+# 2024-06-13 Express II
+Instructor: Jasleen
+
+# 2024-06-14 React & Express
+Instructor: Roberta
