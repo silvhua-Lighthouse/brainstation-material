@@ -29,24 +29,15 @@ function alternateElements(array1, array2) {
 
 // console.log(alternateElements(array1, array2));
 
-function makeBulletedList(notes, who = 'Brian') {
-  let formatted = notes.trim();
-  formatted = formatted.replace(/\xa0/g, '\n');
-  formatted = formatted.replace(/\n+/g, '\n- ');
-  formatted = formatted.replace(/\. /g, '.\n- ');
-  formatted = formatted.replace(/ - /g, '.\n- ');
-  formatted = '- ' + formatted;
-  let today = new Date();
-  let formattedDate = `${today.getFullYear()}-${(today.getMonth() + 1).toString().padStart(2, '0')}-${today.getDate().toString().padStart(2, '0')}`;
-  console.log(`Notes from ${who} on ${formattedDate}:`);
-  console.log(formatted);
-  return formatted;
+/* Double up
+Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+
+"Hello World" => "HHeelllloo  WWoorrlldd"
+*/
+
+function doubleUp(string) {
+  const result = string.split('').map(char => char + char).join('');
+  return result
 }
 
-let notes = `
-She has an auto immune disease
-She is 40 and 5 foot seven and 69 kg
-`;
-
-let who = 'Brian';
-let formatted = makeBulletedList(notes, who);
+console.log(doubleUp('Hello World'));
