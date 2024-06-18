@@ -1,0 +1,13 @@
+@mixin button {
+  background: #eee;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    background: white;
+    box-shadow: 0 0 8px rgb(0 0 0 / 50%);
+  }
+}

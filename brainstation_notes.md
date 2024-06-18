@@ -1577,3 +1577,15 @@ Instructor: Jasleen
 
 # 2024-06-14 React & Express
 Instructor: Roberta
+
+# 2024-06-17 Debugging
+Instructor: Roberta
+
+* To debug in browser, you can expose a function to the browser console by adding it as a property. Then, this function can be invoked in the browser console.
+
+```JavaScript
+window.callbackFunction = callbackFunction;
+```
+
+# 2024-06-17 Database Fundamentals
+Instructor: Nolan Knill

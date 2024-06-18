@@ -1,0 +1,117 @@
+@use "../../styles/partials/mixins" as *;
+
+.player {
+  height: 16rem;
+  width: 12rem;
+  box-sizing: border-box;
+  background: #eee;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  gap: 1rem;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  position: relative;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+
+  &__button {
+    @include button;
+    margin-bottom: 0.25rem;
+  }
+
+  &__number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+      content: "#";
+    }
+  }
+
+  &__name {
+    font-weight: bold;
+    min-height: 20%;
+  }
+
+  &__position {
+    font-size: 0.75em;
+  }
+
+  &--captain {
+    &::after {
+      content: "C";
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      background: gold;
+      color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+    }
+  }
+
+  &--inactive {
+    opacity: 0.8;
+  }
+
+  &--blb {
+    $blb-blue: hsl(216, 68%, 28%);
+    $blb-light-blue: scale-color(
+      $color: $blb-blue,
+      $lightness: 96%,
+    );
+    background: $blb-light-blue;
+    border: 4px solid $blb-blue;
+    color: $blb-blue;
+  }
+
+  &--sws {
+    $sws-red: hsl(358, 56%, 41%);
+    $sws-light-red: scale-color(
+      $color: $sws-red,
+      $lightness: 96%,
+    );
+    $sws-blue: hsl(225, 84%, 20%);
+    background: $sws-light-red;
+    border: 4px solid $sws-red;
+    color: $sws-blue;
+  }
+
+  &--pbp {
+    $pbp-yellow: hsl(39, 87%, 61%);
+    $pbp-light-yellow: scale-color(
+      $color: $pbp-yellow,
+      $lightness: 10%,
+    );
+    $pbp-black: hsl(0, 0%, 7%);
+    background: $pbp-light-yellow;
+    border: 4px solid $pbp-black;
+  }
+
+  &--hike {
+    $hike-pink: hsl(306, 60%, 65%);
+    $hike-light-pink: scale-color(
+      $color: $hike-pink,
+      $lightness: 10%,
+    );
+    $hike-black: hsl(0, 0%, 7%);
+    background: $hike-light-pink;
+    border: 4px solid $hike-black;
+  }
+}
