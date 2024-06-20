@@ -1,3 +1,4 @@
 **/*.css.map
 **/demo*
 **/node_modules
+scratchpad.js
