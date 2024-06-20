@@ -1589,3 +1589,9 @@ window.callbackFunction = callbackFunction;
 
 # 2024-06-17 Database Fundamentals
 Instructor: Nolan Knill
+
+# 2024-06-20 Knex.js & MySQL
+Instructor: Daniil
+
+* Knex.js has been around for a long time but is one of many libraries that can be used.
+
