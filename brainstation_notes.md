@@ -1595,3 +1595,6 @@ Instructor: Daniil
 
 * Knex.js has been around for a long time but is one of many libraries that can be used.
 
+# 2024-06-20 CRUD operations & querying
+Instructor: Jon Mazin
+* Has a QA background

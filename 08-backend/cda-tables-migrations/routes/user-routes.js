@@ -1,16 +1,21 @@
-import initKnex from "knex";
-import configuration from "../knexfile.js";
-const knex = initKnex(configuration);
-import express from "express";
+import express from 'express';
+import * as userController from '../controllers/user-controller.js';
+
 const router = express.Router();
 
-router.get("/", async (_req, res) => {
-  try {
-    const data = await knex("user");
-    res.status(200).json(data);
-  } catch (err) {
-    res.status(400).send(`Error retrieving Users: ${err}`);
-  }
-});
+router
+  .route("/")
+  .get(userController.index)
+  .post(userController.add);
+
+router
+  .route("/:id")
+  .get(userController.findOne)
+  .patch(userController.update)
+  .delete(userController.remove);
+
+router
+  .route("/:id/posts")
+  .get(userController.posts);
 
 export default router;
