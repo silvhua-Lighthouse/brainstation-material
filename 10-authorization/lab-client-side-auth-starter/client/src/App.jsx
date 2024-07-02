@@ -16,23 +16,47 @@ function App() {
   const handleSignup = async (e) => {
     e.preventDefault();
     const body = {
-      username: e.target.username,
-      name: e.target.name,
-      password: e.target.password
+      username: e.target.username.value,
+      name: e.target.name.value,
+      password: e.target.password.value
     }
+    // Here send a POST request to signupUrl with username, name and password data
 
     try {
-      requestUrl = signupUrl;
-      const response = axios 
+      const response = await axios.post(signupUrl, body);
+      console.log(response);
+      if (response.data.success === "true") {
+        setIsSignedUp(true);
+      }
+    } catch (error) {
+      console.log(error)
+      setErrorMessage(true);
     }
-
-    // Here send a POST request to signupUrl with username, name and password data
   };
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
+    const body = {
+      username: e.target.username.value,
+      password: e.target.password.value
+    }
 
     // Here send a POST request to loginUrl with username and password data
+    try {
+      const response = await axios.post(loginUrl, body);
+      if (response.data.token) {
+        const token = response.data.token
+        sessionStorage.setItem('token', token);
+        setIsLoggedIn(true);
+        setIsLoginError(false);
+        setErrorMessage('');
+      }
+    } catch (error) {
+      const errorMessage = error.response.data.error.message;
+      console.log(errorMessage)
+      setErrorMessage(errorMessage);
+    }
+
   };
 
   const renderSignUp = () => (
