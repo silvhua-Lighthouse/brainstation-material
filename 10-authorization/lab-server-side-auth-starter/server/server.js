@@ -3,6 +3,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 import jwt from "jsonwebtoken";
 import cors from "cors";
+import "dotenv/config";
 
 app.use(express.json());
 app.use(cors());
@@ -14,9 +15,22 @@ function authorize(req, res, next) {
   // If the token is not provided, or invalid, then
   // this function should not continue on to the
   // end-point and respond with an error status code.
+  const { authorization } = req.headers;
+  const token = authorization.split(' ')[1];
+  try {
+    const payload = jwt.verify(token, secretKey);
+    req.decoded = payload;
+    console.log(payload);
+    next();
+  } catch (error) {
+    console.log(`Token verification failed: ${error}`);
+
+    res.status(401).send(`Authorization failed`);
+  }
 }
 
 const users = {};
+const secretKey = process.env.SECRET_KEY;
 
 // Some Basic Sign Up Logic. Take a username, name,
 // and password and add it to an object using the
@@ -40,10 +54,16 @@ app.post("/login", (req, res) => {
     // the user can be considered authenticated.
     // Create a JWT token for the user, and add their name to
     // the token. Send the token back to the client.
+    let token = jwt.sign(
+      { username: username },
+      secretKey
+    );
+    res.json({ token: token });
+  } else {
+    // If there's an error, send that back to the client
+    // with a 401 status code.
+    res.status(401).send('Password does not match')
   }
-
-  // If there's an error, send that back to the client
-  // with a 401 status code.
 });
 
 // A Profile end-point that will return user information,
@@ -53,6 +73,7 @@ app.post("/login", (req, res) => {
 // a token, verify that the token is valid, decode
 // the token and put the decoded data onto req.decoded
 app.get("/profile", authorize, (req, res) => {
+  console.log('attempting to get profile')
   res.json(req.decoded);
 });
 

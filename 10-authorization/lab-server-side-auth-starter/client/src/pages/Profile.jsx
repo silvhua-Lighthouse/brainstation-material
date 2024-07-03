@@ -23,7 +23,8 @@ function Profile() {
           },
         });
         setIsLoading(false);
-        setUserInfo({ name: response.data.name });
+        console.log(response)
+        setUserInfo({ name: response.data.username });
       } catch (error) {
         console.error(error);
       }
